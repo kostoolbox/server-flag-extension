@@ -4,6 +4,9 @@
 
 > 适合站长、VPS玩家以及日常想快速辨别网站服务器位置的用户，无需打开命令行或第三方站长工具。
 
+<img width="682" height="428" alt="image" src="https://github.com/user-attachments/assets/6874668b-f79c-4d56-ab9e-a608eb9b04d9" />
+
+
 ## 主要功能
 
 - **满格高清国旗图标**：内置66个常见国家/地区的高清PNG国旗图标，100%铺满工具栏图标区域，解决Windows系统无法显示国旗Emoji的问题；遇到极冷门地区自动绘制地区代码图标兜底。
