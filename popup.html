@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>网站服务器国旗</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 顶部国家与归属地 -->
+    <header class="header">
+      <div class="flag-wrap" id="flagWrap">
+        <img id="flagImg" src="icons/icon48.png" alt="国旗">
+      </div>
+      <div class="header-info">
+        <div class="country-row">
+          <h1 id="countryName">正在查询...</h1>
+          <span class="country-code" id="countryCode"></span>
+        </div>
+        <p class="location-sub" id="locationSub">正在解析服务器归属地</p>
+      </div>
+      <button id="refreshBtn" class="refresh-btn" title="重新查询">刷新</button>
+    </header>
+
+    <!-- 加载/提示状态 -->
+    <div id="statusBox" class="status-box hidden"></div>
+
+    <!-- 主内容区域 -->
+    <main id="contentArea" class="content hidden">
+      <!-- 域名与别名 -->
+      <section class="card">
+        <div class="field-row">
+          <span class="field-label">当前域名</span>
+          <span class="field-value mono" id="domainText">-</span>
+        </div>
+        <div class="field-row hidden" id="cnameRow">
+          <span class="field-label">CNAME 别名</span>
+          <div class="cname-list" id="cnameList"></div>
+        </div>
+      </section>
+
+      <!-- IPv4 地址 -->
+      <section class="card">
+        <div class="section-title">
+          <span>服务器 IPv4 地址</span>
+          <span class="tag">A 记录</span>
+        </div>
+        <div id="ipv4List" class="ip-list"></div>
+      </section>
+
+      <!-- IPv6 地址 -->
+      <section class="card">
+        <div class="section-title">
+          <span>服务器 IPv6 地址</span>
+          <span class="tag">AAAA 记录</span>
+        </div>
+        <div id="ipv6List" class="ip-list"></div>
+      </section>
+
+      <!-- 运营商与解析来源 -->
+      <footer class="meta-footer">
+        <div class="meta-item" id="ispRow">
+          <span class="meta-label">运营商/组织：</span>
+          <span id="ispText">-</span>
+        </div>
+        <div class="meta-item">
+          <span class="meta-label">DNS 解析源：</span>
+          <span id="dnsSourceText">-</span>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <script src="countries.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
